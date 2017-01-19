@@ -17,6 +17,11 @@ int main() {
 		std::cout << "strutututut nie dzia³a" << endl;
 	}
 
+	Gracz g;
+
+	g.tenTyp(s);
+
+
 	//delete s;
 	//delete b;		
 

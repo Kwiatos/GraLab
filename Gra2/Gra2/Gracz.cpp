@@ -2,10 +2,15 @@
 
 using namespace std;
 
-/*bool Gracz::tenTyp(TString typ)
+bool Gracz::tenTyp(TString &typ)
 {
-
-}*/
+	if (this->nazwa == typ) {
+		return true;	
+	}
+	else {
+		return false;
+	}
+}
 
 void Gracz::print()
 {

@@ -10,9 +10,8 @@ private:
 	Bron bron;
 	TString nazwa;
 
-
 public:
-	bool tenTyp(TString typ);
+	bool tenTyp(TString &typ);
 	void print();
 	Gracz(TString &nazwa, Bron &bron);
 	Gracz(TString &nazwa);
