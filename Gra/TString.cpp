@@ -5,16 +5,13 @@ using namespace std;
 
 TString& TString::operator++(int)
 {
-	char *nazwa = (char*)malloc(sizeof(char) * (this->len + 1));
+	char *nazwa = new char[this->len + 1];
 	strcpy(nazwa, this->str);
 
 	delete[] this->str;
-	this->str = (char*)malloc(sizeof(char) * (this->len + 2));
+	this->str = new char[this->len + 2];
 
-	for (int i = 0; i < this->len; i++)
-	{
-		this->str[i] = nazwa[i];
-	}
+	strcpy(this->str, nazwa);
 
 	this->str[len] = '_';
 	this->str[len + 1] = '\0';
@@ -29,21 +26,17 @@ TString& TString::operator++(int)
 
 TString& TString::operator++()
 {
-	char *nazwa = (char*)malloc(sizeof(char) * (this->len + 1));
+	char *nazwa = new char[this->len + 1];
 	strcpy(nazwa, this->str);
 
 	delete[] this->str;
 	this->len += 1;
-	this->str = (char*)malloc(sizeof(char) * (this->len + 1));
+	this->str = new char[this->len + 1];
 
 	this->str[0] = '#';
+	this->str[1] = '\0';
 
-	for (int i = 1; i <= this->len; i++)
-	{
-		this->str[i] = nazwa[i - 1];
-	}
-
-	this->str[this->len] = '\0';
+	strcat(this->str, nazwa);
 
 	delete[] nazwa;
 
@@ -54,20 +47,16 @@ TString& TString::operator++()
 
 char TString::operator[](int index)
 {
-	if (index >= 0) {
-		int len = strlen(this->str);
+	int len = strlen(this->str);
 
-		if (len <= index) {
-			for (int i = 0; i < len; i++) {
-				if (this->str[index] == this->str[i]) {
-					return this->str[i];
-				}
-			}
-		}
-		else {
-			cout << "Podana wartoœæ jest poza ³añcuchem" << endl;
-		}
+	if (index >= 0 && len <= index) {
+		return this->str[index];
 	}
+	else {
+		cout << "Podana wartoœæ jest poza ³añcuchem" << endl;
+	}
+
+	cout << "operator indeksowania TString" << endl;
 }
 
 bool TString::operator ==(TString &t)

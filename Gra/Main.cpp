@@ -29,8 +29,8 @@ int main() {
 	b = b1;*/
 
 	//cin >> b;
-	cin >> g;
-	cout << g;
+	//cin >> g;
+	//cout << g;
 
 	//delete s;
 	//delete b;		
@@ -42,7 +42,7 @@ int main() {
 	//b->print();
 	//delete s;
 
-	//s++;
+	++s;
 
 	cout << "";
 
