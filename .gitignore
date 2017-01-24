@@ -31,7 +31,6 @@ Debug/
 *.out
 *.app
 
-*.sln
 *.vcxproj
 *.vcxproj.filters
 *.VC.db
