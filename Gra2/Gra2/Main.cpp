@@ -1,5 +1,5 @@
 #include "Header.h"
-
+#include <time.h>
 
 int main() {
 
@@ -10,7 +10,15 @@ int main() {
 	Gracz g1;
 	Wojownik w2;
 
-	w1.atakuj(w2);
+	srand(time(NULL));
+
+	//int sila_razenia = rand() % 6 + 5; //5 -10
+	//int sila_razenia = rand() % 6 + 8; //8-13
+	//int sila_razenia = rand() % 11 + 15; //15-25
+	//int sila_razenia = rand() % 16 + 20; //20- 35
+	//int sila_razenia = rand() % 11 + 8; // 8-18
+	int sila_razenia = rand() % 11 + 10; // 10-20
+	//w1.atakuj(w2);
 
 
 	/*TString s("Bartek");
