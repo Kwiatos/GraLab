@@ -5,6 +5,9 @@ int main() {
 
 	int a = 5;
 
+	FabrykaBroni::getFabryka();
+
+
 
 	Wojownik w1;
 	Gracz g1;
@@ -20,6 +23,12 @@ int main() {
 	int sila_razenia = rand() % 11 + 10; // 10-20
 	//w1.atakuj(w2);
 
+
+	string tekst = "tralallala";
+
+	for (int i = 0; i < tekst.length(); i++) {
+		cout << tekst[i] << endl;
+	}
 
 	/*TString s("Bartek");
 	TString s1;

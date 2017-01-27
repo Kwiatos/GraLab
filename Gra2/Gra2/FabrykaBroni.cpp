@@ -49,7 +49,7 @@ Bron FabrykaBroni::stworzLosowo() {
 FabrykaBroni::FabrykaBroni()
 {
 	string linia;
-	int zliczLinie = 0;
+	int i= 0;
 
 	this->ilosc_osob = 0;
 	this->ilosc_przymiotnikow = 0;
@@ -60,6 +60,16 @@ FabrykaBroni::FabrykaBroni()
 		while (getline(this->przymiotnik, linia)) {
 			this->ilosc_przymiotnikow++;
 		}
+
+		this->przymiotnik.clear();
+		this->przymiotnik.seekg(0);
+
+		this->przymiotnikiS = new string[this->ilosc_przymiotnikow];
+
+	}
+
+	while (getline(this->przymiotnik, linia)) {
+		this->przymiotnikiS[i] = linia;
 	}
 
 	this->osoba.open("osoba.txt");

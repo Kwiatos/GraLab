@@ -7,3 +7,4 @@
 #include "Bron.h"
 #include "Wojownik.h"
 #include "Wspolrzedne.h"
+#include "FabrykaBroni.h"

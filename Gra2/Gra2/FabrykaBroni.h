@@ -11,6 +11,7 @@ private:
 	fstream typ;
 	int ilosc_osob, ilosc_przymiotnikow, ilosc_typow;
 	FabrykaBroni();
+	string* przymiotnikiS;
 public:
 
 	static FabrykaBroni& getFabryka() {
