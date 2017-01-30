@@ -5,9 +5,9 @@ int main() {
 
 	int a = 5;
 
-	FabrykaBroni::getFabryka();
+	FabrykaBroni& fabryka = FabrykaBroni::getFabryka();
 
-
+	Bron& luk = fabryka.stworzLuk();
 
 	Wojownik w1;
 	Gracz g1;

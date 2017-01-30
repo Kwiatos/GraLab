@@ -11,14 +11,13 @@ private:
 	fstream typ;
 	int ilosc_osob, ilosc_przymiotnikow, ilosc_typow;
 	FabrykaBroni();
-	string* przymiotnikiS;
+	string przymiotniki[5], osoby[5], typy[5];
 public:
 
 	static FabrykaBroni& getFabryka() {
 		static FabrykaBroni fabryka;
 		return fabryka;
 	}
-	char* losujPrzymiotnik(int numer);
 	Bron& stworzLuk();
 	Bron stworzKusze();
 	Bron stworzMiecz();
